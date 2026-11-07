@@ -11,7 +11,7 @@ export const PROFILE = {
 
 export const SOCIALS = [
   { id: "behance", label: "Behance", handle: "behance.net/calebanekwe", href: "https://www.behance.net/calebanekwe" },
-  { id: "linkedin", label: "LinkedIn", handle: "in/caleb-anekwe", href: "https://www.linkedin.com/in/caleb-anekwe" },
+  { id: "linkedin", label: "LinkedIn", handle: "in/caleb-anekwe", href: "https://www.linkedin.com/in/caleb-anekwe-621bb0302" },
   { id: "instagram", label: "Instagram", handle: "@calebthekreator", href: "https://www.instagram.com/calebthekreator/" },
 ];
 

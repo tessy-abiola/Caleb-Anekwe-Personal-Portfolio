@@ -58,13 +58,7 @@ export default function Footer() {
 
   <span className="footer-credit">
     Designed &amp; Developed by{" "}
-    <a
-      href="https://testimony-abiola.netlify.app/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Testimony Abiola
-    </a>
+    Testimony Abiola
   </span>
 
   <button type="button" className="footer-top" onClick={scrollToTop}>
