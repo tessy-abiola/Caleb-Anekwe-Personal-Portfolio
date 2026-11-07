@@ -1,0 +1,113 @@
+/* src/styles/contact.css */
+
+.contact { background: var(--blue); color: #fff; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: clamp(40px, 7vw, 104px);
+  align-items: start;
+}
+
+.contact-eyebrow { color: rgba(255, 255, 255, 0.82); }
+.contact-title {
+  margin-top: 20px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(40px, 5.8vw, 80px);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
+}
+.contact-lead { max-width: 480px; margin-top: 28px; font-size: 18px; line-height: 1.6; color: rgba(255, 255, 255, 0.88); }
+
+.contact-socials { display: grid; gap: 10px; margin-top: 44px; max-width: 480px; }
+.contact-social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px 14px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+.contact-social:hover { background: #fff; color: #0a0a0c; border-color: #fff; }
+.contact-social-icon {
+  display: grid;
+  place-items: center;
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.14);
+  flex-shrink: 0;
+  transition: background 0.25s;
+}
+.contact-social:hover .contact-social-icon { background: rgba(0, 96, 253, 0.12); }
+.contact-social-text { display: flex; flex-direction: column; min-width: 0; flex: 1; line-height: 1.3; }
+.contact-social-label { font-family: var(--font-display); font-weight: 650; font-size: 17px; letter-spacing: -0.01em; }
+.contact-social-handle { font-size: 14px; opacity: 0.8; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.contact-social-arrow { font-size: 20px; transition: transform 0.3s var(--ease); }
+.contact-social:hover .contact-social-arrow { transform: translate(3px, -3px); }
+
+/* Behance carries extra weight */
+.contact-social--primary { background: #fff; color: #0a0a0c; border-color: #fff; padding-top: 18px; padding-bottom: 18px; }
+.contact-social--primary .contact-social-icon { background: var(--blue); color: #fff; }
+.contact-social--primary:hover { background: #0a0a0c; color: #fff; border-color: #0a0a0c; }
+.contact-social--primary:hover .contact-social-icon { background: var(--blue); }
+
+.contact-direct { margin-top: 32px; font-size: 15px; color: rgba(255, 255, 255, 0.85); }
+.contact-direct a { text-underline-offset: 3px; }
+
+/* Form card */
+.contact-card {
+  padding: clamp(24px, 3.4vw, 40px);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--text);
+  box-shadow: 0 30px 80px rgba(0, 20, 80, 0.35);
+}
+
+.field { display: flex; flex-direction: column; margin-bottom: 22px; }
+.field label {
+  margin-bottom: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--line-strong);
+  background: var(--bg-raised);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  transition: border-color 0.2s, background 0.2s;
+}
+.field textarea { resize: vertical; min-height: 150px; }
+.field input::placeholder,
+.field textarea::placeholder { color: var(--text-faint); }
+.field input:hover,
+.field textarea:hover { border-color: rgba(244, 241, 234, 0.4); }
+.field input:focus-visible,
+.field textarea:focus-visible { outline: 0; border-color: var(--blue-text); box-shadow: 0 0 0 3px rgba(91, 155, 255, 0.25); }
+.field [aria-invalid="true"] { border-color: #ff8a80; }
+.field-error { margin-top: 8px; font-size: 14px; color: #ff9d95; }
+
+.contact-submit { width: 100%; }
+.form-status:not(:empty) { margin-top: 16px; }
+.form-status { font-size: 14px; line-height: 1.55; color: var(--text-muted); }
+.form-status a { color: var(--blue-text); text-underline-offset: 3px; }
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+@media (max-width: 480px) {
+  .contact-social { padding-right: 14px; }
+}
